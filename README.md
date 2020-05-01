@@ -105,4 +105,4 @@ Vipul Patel (Yudiz Solutions Pvt. Ltd.), vipul.p@yudiz.in
 
 ## License
 
-YZImagePicker is available under the MIT license. See the LICENSE file for more info.
+YZImagePicker is released under the MIT license. [See LICENSE](https://github.com/yudiz-vipul/YZImagePicker/blob/master/LICENSE) for details.
