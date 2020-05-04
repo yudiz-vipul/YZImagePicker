@@ -35,3 +35,20 @@ Carthage/Build
 # `pod install` in .travis.yml
 #
 # Pods/
+
+/Example/IBStock-SCR.xcodeproj/project.xcworkspace
+/Example/IBStock-SCR.xcodeproj/xcuserdata
+/Example/IBStock-SCR.xcodeproj/xcshareddata
+/Example/IBStock-SCR.xcodeproj/project.xcworkspace/xcuserdata
+/Example/IBStock-SCR.xcodeproj/project.xcworkspace/IBStock-SCR.xcworkspace
+/Example/IBStock-SCR.xcworkspace/contents.xcworkspacedata
+/Example/IBStock-SCR.xcworkspace/xcuserdata
+/Example/IBStock-SCR.xcworkspace
+/Example/IBStock-SCR.xcworkspace/xcshareddata
+/Example/Pods
+/Podfile.lock
+*.DS_Store
+.DS_Store
+Example/Podfile.lock
+Example/YZImagePicker.xcworkspace/contents.xcworkspacedata
+Example/YZImagePicker.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist

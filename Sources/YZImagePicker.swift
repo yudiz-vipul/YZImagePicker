@@ -129,7 +129,9 @@ extension YZImagePicker: UIImagePickerControllerDelegate, UINavigationController
     /// It is `UIImagePickerControllerDelegate` method, call when user canceling capture or choose image.
     /// - Parameter picker: `UIImagePickerController` type object.
     public func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        delegate?.imagePickerDidCancel?(anyObject: anyObject)
+        picker.dismiss(animated: true) {
+            self.delegate?.imagePickerDidCancel?(anyObject: self.anyObject)
+        }
     }
 }
 

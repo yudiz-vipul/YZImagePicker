@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                    = 'YZImagePicker'
-  s.version                 = '0.1.0'
+  s.version                 = '0.1.1'
   s.summary                 = 'YZImagePicker is design and developed for Yudiz Solutions Pvt. Ltd.'
   s.description             = <<-DESC
   "YZImagePicker is useful for Junior iOS developer and trainee, so it easy can be easy to develop application and reduce code lines."

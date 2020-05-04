@@ -78,11 +78,30 @@ class ViewController: UIViewController, YZImagePickerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         if objImagePicker == nil {
-            objImagePicker = YZImagePicker(self, delegate: self)
+            objImagePicker = YZImagePicker(self, delegate: self) //It will initialize object without Cropping features.
         }
     }
 }
+
+class ViewController: UIViewController, YZImagePickerDelegate {
+    var objImagePicker: YZImagePicker!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        if objImagePicker == nil {
+            let yzImageCropConfig = YZImagePickerCropConfig(120, leadingSpace: 20, bottomSpace: 120, trailingSpace: 20, cornerRadius: 5)
+            let yzImagePickerConfig = YZImagePickerConfig(.custom, cropConfig: yzImageCropConfig)
+            objImagePicker = YZImagePicker(self, delegate: self, imagePickerConfig: yzImagePickerConfig) //It will initialize object with Cropping features.
+        }
+    }
+}
+
 ```
+
+**Methods:**
+* `takePhoto()` - It is used to take a photo from device camera.
+* `chooseFromLibrary()` - It is used to choose a photo from device photos library.
+
+
 **YZImagePickerDelegate**
 
 * `@objc optional func imagePickerDidSelected(image: UIImage?, anyObject: Any?)` - Delegate method call when user choosed or captured image.
@@ -96,7 +115,7 @@ YZImagePicker is available through [CocoaPods](https://cocoapods.org). To instal
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'YZImagePicker'
+pod 'YZImagePicker', '~> 0.1.1'
 ```
 
 ## Author

@@ -7,18 +7,39 @@
 //
 
 import UIKit
+import YZImagePicker
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, YZImagePickerDelegate {
+    @IBOutlet weak var imgVw: UIImageView!
+    var objImagePicker: YZImagePicker!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        initImagePicker()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func initImagePicker() {
+        if objImagePicker == nil {
+            let yzImageCropConfig = YZImagePickerCropConfig(120, leadingSpace: 20, bottomSpace: 120, trailingSpace: 20, cornerRadius: 5)
+            let yzImagePickerConfig = YZImagePickerConfig(.custom, cropConfig: yzImageCropConfig)
+            objImagePicker = YZImagePicker(self, delegate: self, imagePickerConfig: yzImagePickerConfig)
+        }
     }
-
+    
+    @IBAction func onTap(_ sender: UIButton) {
+        objImagePicker.takePhoto()
+    }
+    
+    func imagePickerDidSelected(image: UIImage?, anyObject: Any?) {
+        imgVw.image = image
+    }
+    
+    func imagePickerDidCancel(anyObject: Any?) {
+        print(#function + " Cancelled.")
+    }
+    
+    func imagePickerPermissionDidChanged(status: Int, isGranted: Bool, anyObject: Any?) {
+        print(#function + " Status : " + status.description + " isGranted : \(isGranted)")
+    }
 }
 

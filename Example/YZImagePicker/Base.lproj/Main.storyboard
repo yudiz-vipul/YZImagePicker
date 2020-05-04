@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,11 +18,37 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="smz-WW-9Ct">
+                                <rect key="frame" x="164.5" y="100" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="onTap:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="HRy-Fx-CW2"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wcg-c8-bdA">
+                                <rect key="frame" x="37.5" y="160" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="wcg-c8-bdA" secondAttribute="height" id="i3t-bh-82X"/>
+                                    <constraint firstAttribute="height" constant="300" id="zBd-s3-HZ7"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wcg-c8-bdA" firstAttribute="top" secondItem="smz-WW-9Ct" secondAttribute="bottom" constant="30" id="HG4-xE-Hfb"/>
+                            <constraint firstItem="smz-WW-9Ct" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="100" id="JWX-Jf-muI"/>
+                            <constraint firstItem="wcg-c8-bdA" firstAttribute="centerX" secondItem="smz-WW-9Ct" secondAttribute="centerX" id="dfl-pn-xjg"/>
+                            <constraint firstItem="smz-WW-9Ct" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="mxv-8i-4LF"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imgVw" destination="wcg-c8-bdA" id="gDn-0T-6Lg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="138" y="134"/>
         </scene>
     </scenes>
 </document>
