@@ -1,6 +1,5 @@
 # YZImagePicker
 
-[![CI Status](https://img.shields.io/travis/Vipul Patel/YZImagePicker.svg?style=flat)](https://travis-ci.org/Vipul Patel/YZImagePicker)
 [![Version](https://img.shields.io/cocoapods/v/YZImagePicker.svg?style=flat)](https://cocoapods.org/pods/YZImagePicker)
 [![License](https://img.shields.io/cocoapods/l/YZImagePicker.svg?style=flat)](https://cocoapods.org/pods/YZImagePicker)
 [![Platform](https://img.shields.io/cocoapods/p/YZImagePicker.svg?style=flat)](https://cocoapods.org/pods/YZImagePicker)
@@ -124,4 +123,4 @@ Vipul Patel (Yudiz Solutions Pvt. Ltd.), vipul.p@yudiz.in
 
 ## License
 
-YZImagePicker is available under the MIT license. See the LICENSE file for more info.
+YZImagePicker is released under the MIT license. [See LICENSE](https://github.com/yudiz-vipul/YZImagePicker/blob/master/LICENSE) for details.
